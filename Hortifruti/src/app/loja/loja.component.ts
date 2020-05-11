@@ -26,4 +26,11 @@ export class LojaComponent implements OnInit {
     })
   }
 
+  publicar() {
+    this.produtoService.postProduto(this.produto).subscribe((resp: Produto) => {
+      this.produto = resp
+      location.assign('/loja')
+    })
+  }
+
 }
