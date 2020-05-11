@@ -5,7 +5,7 @@
         <div class="col-md-12">
 
             <div>
-                <h3 class="text-center mb-4 text-monospace">Cadastre um produto</h3>
+                <h3 class="text-center mb-4 text-monospace">Editar produto</h3>
 
                 <div class="form-group">
                     <label for="titulo" class="text-monospace">nome</label>
@@ -28,39 +28,11 @@
                         [(ngModel)]="produto.quantidadeEmEstoque">
                 </div>
                 <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-info w-25" (click)="publicar()">Cadastrar</button>
+                    <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>
                 </div>
             </div>
 
-            <hr class="mt-5 mb-5">
 
-            <h3 class="text-monospace text-center mb-5">Bem vindo a nossa loja</h3>
-
-            <div class="card mb-4" *ngFor="let produto of listaProdutos">
-
-                <div class="card-header">
-
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h5 class="card-title">{{produto.nome}}</h5>
-
-                        </div>
-                        <div class="col-md-4 d-flex justify-content-end">
-                            <button class="btn btn-outline-info" [routerLink]="['/editar', produto.id]">
-                                Editar
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="card-body" style="text-align: center;">
-                    <img class="card-img-top" src="{{produto.imagem}}" alt="Imagem do produto" style="width: 5rem;">
-                    <p class="card-text">Código: {{produto.id}}</p>
-                    <p class="card-text">Preço: R{{produto.preco | currency}}</p>
-                    <p class="card-text">Quantidade em estoque: {{produto.quantidadeEmEstoque}}</p>
-                </div>
-            </div>
 
 
         </div>
