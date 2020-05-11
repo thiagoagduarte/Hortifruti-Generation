@@ -35,7 +35,11 @@
             <hr class="mt-5 mb-5">
 
             <h3 class="text-monospace text-center mb-5">Bem vindo a nossa loja</h3>
-
+            <div *ngIf='alerta'>
+                <div class="alert alert-success" role="alert">
+                    Produto deletado com sucesso!
+                </div>
+            </div>
             <div class="card mb-4" *ngFor="let produto of listaProdutos">
 
                 <div class="card-header">
@@ -46,8 +50,11 @@
 
                         </div>
                         <div class="col-md-4 d-flex justify-content-end">
-                            <button class="btn btn-outline-info" [routerLink]="['/editar', produto.id]">
+                            <button class="btn btn-outline-info mr-3" [routerLink]="['/editar', produto.id]">
                                 Editar
+                            </button>
+                            <button class="btn btn-outline-danger" [routerLink]="['/deletar', produto.id]">
+                                Deletar
                             </button>
                         </div>
 

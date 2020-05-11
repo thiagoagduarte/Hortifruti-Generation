@@ -14,10 +14,22 @@ export class LojaComponent implements OnInit {
   produto: Produto = new Produto()
   id: number;
 
+  alerta: boolean = false
+
   constructor(private produtoService: ProdutoService) { }
 
   ngOnInit() {
     this.findallProdutos()
+    let item: string = localStorage.getItem('delOk')
+    if (item == "true") {
+      this.alerta = true
+      localStorage.clear()
+
+      setTimeout(() => {
+        location.assign('/loja')
+      }, 5000);
+
+    }
   }
 
   findallProdutos() {
