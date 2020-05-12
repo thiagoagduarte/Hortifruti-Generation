@@ -10,24 +10,17 @@
 
             <hr class="mt-5 mb-5">
 
-            <div class="card mb-4">
-
-                <div class="card-header">
-
-                    <div class="row">
-                        <div class="col-md-8">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="card col-md-3 ml-3 mt-5 mr-3">
+                        <img class="card-img-top" src="{{produto.imagem}}" alt="Imagem do produto">
+                        <div class="card-body text-center">
                             <h5 class="card-title">{{produto.nome}}</h5>
-
                         </div>
-
+                        <p class="card-text">Código: {{produto.id}}</p>
+                        <p class="card-text">Preço: R{{produto.preco | currency}}</p>
+                        <p class="card-text">Quantidade em estoque: {{produto.qtdEstoque}}</p>
                     </div>
-                </div>
-
-                <div class="card-body" style="text-align: center;">
-                    <img class="card-img-top" src="{{produto.imagem}}" alt="Imagem do produto" style="width: 5rem;">
-                    <p class="card-text">Código: {{produto.id}}</p>
-                    <p class="card-text">Preço: R{{produto.preco | currency}}</p>
-                    <p class="card-text">Quantidade em estoque: {{produto.quantidadeEmEstoque}}</p>
                 </div>
             </div>
             <hr class="mt-5 mb-5">

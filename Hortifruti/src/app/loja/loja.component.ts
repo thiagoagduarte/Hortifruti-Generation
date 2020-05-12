@@ -20,6 +20,7 @@ export class LojaComponent implements OnInit {
 
   ngOnInit() {
     this.findallProdutos()
+    window.scroll(0, 0)
     let item: string = localStorage.getItem('delOk')
     if (item == "true") {
       this.alerta = true

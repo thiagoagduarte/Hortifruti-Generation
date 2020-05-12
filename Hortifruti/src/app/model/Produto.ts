@@ -3,5 +3,5 @@ export class Produto {
     public nome: string
     public preco: number
     public imagem: string
-    public quantidadeEmEstoque: number
+    public qtdEstoque: number
 }

@@ -2,7 +2,11 @@
 
     <div class="row mt-5 mb-5">
 
-        <div class="col-md-12">
+        <div class="col-md-4">
+            <img class="card-img-top" src="{{produto.imagem}}" alt="Imagem do produto">
+        </div>
+
+        <div class="col-md-8">
 
             <div>
                 <h3 class="text-center mb-4 text-monospace">Editar produto</h3>
@@ -25,7 +29,7 @@
                 <div class="form-group">
                     <label for="titulo" class="text-monospace">quantidade em estoque</label>
                     <input type="number" id="nome" class="form-control" placeholder="Digite a quantidade em estoque"
-                        [(ngModel)]="produto.quantidadeEmEstoque">
+                        [(ngModel)]="produto.qtdEstoque">
                 </div>
                 <div class="d-flex justify-content-end">
                     <button type="button" class="btn btn-outline-info w-25" (click)="salvar()">Salvar</button>

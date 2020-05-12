@@ -18,6 +18,7 @@ export class EditarComponent implements OnInit {
 
     let id = this.route.snapshot.params['id']
     this.findById(id)
+    window.scroll(0, 0)
 
   }
 
